@@ -1,0 +1,23 @@
+.search-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 100%;
+  padding-top: 10px;
+  font-size: 1.4rem;
+  color: black;
+  text-decoration-color: none;
+}
+
+.search {
+  margin: 20px;
+  width: 100px;
+}
+
+.nav-link {
+  color: black;
+}
+
+.instagram-link {
+  border-left: 1px solid black;
+}
