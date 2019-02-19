@@ -1,44 +1,24 @@
-import React from 'react';
-import { Nav, NavItem, NavLink } from 'reactstrap';
-import './SearchBar.css';
-export default class SearchBar extends React.Component {
-  render() {
-    return (
-      <section className="search-bar">
-        <Nav>
-          <NavItem>
-            <NavLink href="#">
-              <i class="fab fa-instagram" />
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#" className="instagram-link">
-              Instagram
-            </NavLink>
-          </NavItem>
-          <input
-            type="text"
-            name="search"
-            placeholder=" Search.."
-            className="search"
-          />
-          <NavItem>
-            <NavLink href="#">
-              <i class="far fa-compass" />
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">
-              <i class="far fa-heart" />
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">
-              <i class="far fa-user" />
-            </NavLink>
-          </NavItem>
-        </Nav>
-      </section>
-    );
-  }
-}
+import React from "react";
+import "./SearchBar.css";
+const SearchBar = props => {
+  return (
+    <div className="search-bar-wrapper">
+      <div className="image-wrapper">INSTAGRAM</div>
+      <div>
+        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
+      </div>
+      <div className="social-wrapper">
+        <div className="social">
+          <i className="far fa-compass" />
+        </div>
+        <div className="social">
+          <i className="far fa-heart" />
+        </div>
+        <div className="social">
+          <i className="far fa-user-circle" />
+        </div>
+      </div>
+    </div>
+  );
+};
+export default SearchBar;
