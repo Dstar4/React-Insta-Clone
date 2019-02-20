@@ -9,7 +9,7 @@ const Post = props => {
         userName={props.post.username}
         imageUrl={props.post.thumbnailUrl}
       />
-      <img src={props.post.imageUrl} alt="" />
+      <img src={props.post.imageUrl} alt="" className="main-image" />
     </div>
   );
 };
