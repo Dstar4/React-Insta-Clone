@@ -1,0 +1,30 @@
+.search-bar-wrapper {
+  display: flex;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid darkgray;
+  justify-content: space-evenly;
+}
+.icons {
+  display: flex;
+}
+.icon {
+  margin: 0 10px;
+}
+.logos {
+  display: flex;
+}
+.ig-camera {
+  height: 40px;
+  width: auto;
+  margin: 0 10px;
+}
+.ig-text {
+  width: auto;
+  height: 40px;
+  padding: 0 10px;
+  border-left: 1px solid black;
+}
+.search {
+  padding: 0 10px;
+}
