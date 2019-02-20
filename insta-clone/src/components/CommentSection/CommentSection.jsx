@@ -28,7 +28,7 @@ class CommentSection extends React.Component {
       JSON.stringify(this.state.comments)
     );
   };
-  handleComments = e => {
+  handleComment = e => {
     this.setState({ comment: e.target.value });
   };
   submitComment = e => {
@@ -47,8 +47,8 @@ class CommentSection extends React.Component {
         ))}
         <CommentInput
           comment={this.state.comment}
-          submitComment={this.state.submitComment}
-          changeComment={this.handleComments}
+          submitComment={this.submitComment}
+          changeComment={this.changeComment}
         />
       </div>
     );
