@@ -2,6 +2,7 @@ import React from "react";
 import "./Post.css";
 import PostHeader from "./PostHeader";
 import CommentSection from "../CommentSection/CommentSection";
+import LikeSection from "./LikeSection";
 
 const Post = props => {
   return (
@@ -11,6 +12,7 @@ const Post = props => {
         imageUrl={props.post.thumbnailUrl}
       />
       <img src={props.post.imageUrl} alt="" className="main-image" />
+      <LikeSection />
       <CommentSection comments={props.post.comments} />
     </div>
   );

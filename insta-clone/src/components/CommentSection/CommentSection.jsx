@@ -45,7 +45,11 @@ class CommentSection extends React.Component {
         {this.state.comments.map((a, b) => (
           <Comment key={b} comment={a} />
         ))}
-        <CommentInput comment={this.state.comment} />
+        <CommentInput
+          comment={this.state.comment}
+          submitComment={this.state.submitComment}
+          changeComment={this.handleComments}
+        />
       </div>
     );
   }
