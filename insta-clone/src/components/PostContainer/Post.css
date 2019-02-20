@@ -1,7 +1,7 @@
 .post-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-itemqs: center; */
 }
 .post-header {
   font-size: 15px;
