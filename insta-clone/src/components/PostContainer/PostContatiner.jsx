@@ -1,11 +1,12 @@
 import React from "react";
-import "./Post.css";
 import Post from "./Post";
+import "./Post.css";
 const PostContainer = props => {
   return (
     <div>
-      post
-      <Post />
+      {props.post.map(post => (
+        <Post key={post.imageUrl} post={post} />
+      ))}
     </div>
   );
 };

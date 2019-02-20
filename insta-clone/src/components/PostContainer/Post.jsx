@@ -4,7 +4,10 @@ import PostHeader from "./PostHeader";
 const Post = props => {
   return (
     <div>
-      <PostHeader />
+      <PostHeader
+        userName={props.post.username}
+        imageUrl={props.post.thumbnailUrl}
+      />
     </div>
   );
 };
