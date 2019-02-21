@@ -1,9 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 
-const authenticate = PostsPage => LoginPage =>
+const authenticate = PostsPage => Login =>
   class extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        loggedIn: false
+      };
+    }
+    componentDidMount() {
+      if (!localStorage.getItem("user")) {
+        this.setState({ loggedIn: false });
+      } else {
+        this.setState({ loggedIn: true });
+      }
+    }
+
     render() {
-      return <LoginPage />;
+      if (this.state.loggedIn) return <PostsPage />;
+      return <Login />;
     }
   };
 

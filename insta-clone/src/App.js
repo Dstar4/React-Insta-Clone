@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import PostsPage from "./components/PostContainer/PostsPage";
 import authenticate from "./components/Authentication/Authentication";
-import LoginPage from "./components/Authentication/LoginPage";
+import Login from "./components/Login/Login";
 class App extends Component {
   constructor() {
     super();
@@ -16,5 +16,5 @@ class App extends Component {
     );
   }
 }
-const LoginAuthenticate = authenticate(PostsPage)(LoginPage);
+const LoginAuthenticate = authenticate(PostsPage)(Login);
 export default App;
