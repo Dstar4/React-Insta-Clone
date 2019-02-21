@@ -1,12 +1,22 @@
 import React, { Component } from "react";
-
+import {
+  Button,
+  Form,
+  Input,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
+} from "reactstrap";
 class Login extends Component {
   constructor() {
     super();
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      modal: true
     };
+    this.toggle = this.toggle.bind(this);
   }
   inputChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -16,26 +26,44 @@ class Login extends Component {
     localStorage.setItem("user", user);
     window.location.reload();
   };
+  toggle() {
+    this.setState(prevState => ({
+      modal: !prevState.modal
+    }));
+  }
   render() {
     return (
-      <form>
-        <h1>Login Here</h1>
-        <input
-          type="text"
-          placeholder="Username"
-          value={this.state.username}
-          onChange={this.inputChange}
-          name="username"
-        />
-        <input
-          type="text"
-          placeholder="Password"
-          value={this.state.password}
-          onChange={this.inputChange}
-          name="password"
-        />
-        <button onClick={this.signIn}>Sign In</button>
-      </form>
+      <div>
+        <Modal
+          isOpen={this.state.modal}
+          toggle={this.toggle}
+          className={this.props.className}
+        >
+          <ModalHeader toggle={this.toggle}>Sign In</ModalHeader>
+          <ModalBody>
+            <Form>
+              <Input
+                type="text"
+                placeholder="Username"
+                value={this.state.username}
+                onChange={this.inputChange}
+                name="username"
+              />
+              <br />
+              <Input
+                type="password"
+                placeholder="Password"
+                value={this.state.password}
+                onChange={this.inputChange}
+                name="password"
+              />
+            </Form>
+          </ModalBody>
+          <ModalFooter>
+            <Button onClick={this.signIn}>Sign In</Button>
+          </ModalFooter>
+        </Modal>
+      </div>
     );
   }
 }
