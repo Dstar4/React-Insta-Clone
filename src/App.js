@@ -16,5 +16,5 @@ class App extends Component {
     );
   }
 }
-const LoginAuthenticate = authenticate(Login)(PostsPage);
+const LoginAuthenticate = authenticate(PostsPage)(Login);
 export default App;
