@@ -45,7 +45,7 @@ class Login extends Component {
         >
           <ModalHeader>Sign In</ModalHeader>
           <ModalBody>
-            <Form>
+            <Form onSubmit={this.signIn}>
               <Input
                 type="text"
                 placeholder="Username"
