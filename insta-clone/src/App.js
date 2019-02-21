@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar searchPosts={this.searchPostsHandler} />
         <PostContainer
           post={
             this.state.filteredPosts.length > 0
