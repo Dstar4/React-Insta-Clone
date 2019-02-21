@@ -39,7 +39,6 @@ class CommentSection extends React.Component {
     this.setState({ comments, comment: "" });
     console.log(newComment);
   };
-
   render() {
     return (
       <div>

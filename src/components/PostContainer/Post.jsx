@@ -1,9 +1,13 @@
 import React from "react";
-import "./Post.css";
 import PostHeader from "./PostHeader";
 import CommentSection from "../CommentSection/CommentSection";
 import LikeSection from "./LikeSection";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+const MainImage = styled.img`
+  width: 500px;
+  height: auto;
+`;
 class Post extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +26,7 @@ class Post extends React.Component {
           userName={this.props.post.username}
           thumbUrl={this.props.post.thumbnailUrl}
         />
-        <img src={this.props.post.imageUrl} alt="" className="main-image" />
+        <MainImage src={this.props.post.imageUrl} alt="" />
         <LikeSection
           likes={this.state.likes}
           incrementLike={this.incrementLike}

@@ -1,18 +1,26 @@
 import React from "react";
-
+import styled from "styled-components";
+const LikeIcon = styled.text`
+margin: 10px
+font-size:20px
+`;
+const LikesWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
 const LikeSection = props => {
   return (
-    <div className="likes-section">
+    <LikesWrapper>
       <div
         className="like-section"
         key="likes-icons-container"
         onClick={props.incrementLike}
       >
-        <i className="far fa-heart like-icon" />
+        <LikeIcon className="far fa-heart" />
       </div>
       {props.likes}
-      <i className="far fa-comment like-icon" />
-    </div>
+      <LikeIcon className="far fa-comment" />
+    </LikesWrapper>
   );
 };
 export default LikeSection;

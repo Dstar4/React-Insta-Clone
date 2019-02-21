@@ -1,13 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Comment.css";
+import styled from "styled-components";
 
+const CommentBox = styled.div`
+  display: flex;
+  width: 500px;
+`;
+const CommentUser = styled.div`
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+`;
+const CommentText = styled.div``;
 const Comment = props => {
   return (
-    <div className="comment-box">
-      <div className="comment-text">{props.comment.text}</div>
-      <div className="comment-user">{props.comment.username}</div>
-    </div>
+    <CommentBox>
+      <CommentText>{props.comment.text}</CommentText>
+      <CommentUser>{props.comment.username}</CommentUser>
+    </CommentBox>
   );
 };
 Comment.propTypes = {
