@@ -1,14 +1,18 @@
 import React from "react";
 import Post from "./Post";
-import "./Post.css";
-
+import styled from "styled-components";
+const PostWrapper = styled.div`
+  display: flex
+  flex-direction: column
+  align-items: center
+`;
 const PostContainer = props => {
   return (
-    <div className="post-container">
+    <PostWrapper>
       {props.post.map(post => (
         <Post key={post.imageUrl} post={post} className="post" />
       ))}
-    </div>
+    </PostWrapper>
   );
 };
 
