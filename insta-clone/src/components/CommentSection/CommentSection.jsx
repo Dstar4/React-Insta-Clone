@@ -37,6 +37,7 @@ class CommentSection extends React.Component {
     const comments = this.state.comments.slice();
     comments.push(newComment);
     this.setState({ comments, comment: "" });
+    console.log(newComment);
   };
 
   render() {
@@ -48,7 +49,7 @@ class CommentSection extends React.Component {
         <CommentInput
           comment={this.state.comment}
           submitComment={this.submitComment}
-          changeComment={this.changeComment}
+          handleComment={this.handleComment}
         />
       </div>
     );

@@ -20,12 +20,12 @@ class Post extends React.Component {
       <div>
         <PostHeader
           userName={this.props.post.username}
-          imageUrl={this.props.post.thumbnailUrl}
+          thumbUrl={this.props.post.thumbnailUrl}
         />
         <img src={this.props.post.imageUrl} alt="" className="main-image" />
         <LikeSection
           likes={this.state.likes}
-          incrementLike={this.state.incrementLike}
+          incrementLike={this.incrementLike}
         />
         <CommentSection
           postId={this.props.post.imageUrl}

@@ -15,9 +15,9 @@ class App extends Component {
     this.setState({ posts: dummyData });
   }
   searchPostsHandler = e => {
-    const posts = this.state.posts.filter(p => {
-      if (p.username.includes(e.target.value)) {
-        return p;
+    const posts = this.state.posts.filter(posts => {
+      if (posts.username.includes(e.target.value)) {
+        return posts;
       }
     });
     this.setState({ filteredPosts: posts });
