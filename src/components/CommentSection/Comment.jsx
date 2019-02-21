@@ -10,7 +10,7 @@ const CommentBox = styled.div`
 const CommentUser = styled(UserName)`
   margin-right: 5px;
 `;
-const CommentText = styled.div``;
+const CommentText = styled.span``;
 const Comment = props => {
   return (
     <CommentBox>

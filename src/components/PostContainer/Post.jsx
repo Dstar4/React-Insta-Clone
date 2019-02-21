@@ -4,9 +4,14 @@ import CommentSection from "../CommentSection/CommentSection";
 import LikeSection from "./LikeSection";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-const MainImage = styled.img`
+import { Card, CardImg } from "reactstrap";
+const MainImage = styled(CardImg)`
   width: 500px;
   height: auto;
+`;
+const MainCard = styled(Card)`
+  padding: 2%;
+  margin: 2%;
 `;
 class Post extends React.Component {
   constructor(props) {
@@ -21,7 +26,7 @@ class Post extends React.Component {
   };
   render() {
     return (
-      <div>
+      <MainCard>
         <PostHeader
           userName={this.props.post.username}
           thumbUrl={this.props.post.thumbnailUrl}
@@ -35,7 +40,7 @@ class Post extends React.Component {
           postId={this.props.post.imageUrl}
           comments={this.props.post.comments}
         />
-      </div>
+      </MainCard>
     );
   }
 }

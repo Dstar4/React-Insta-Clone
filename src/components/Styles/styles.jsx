@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const UserName = styled.p`
+const UserName = styled.span`
   font-size: 16px;
   font-weight: 600;
 `;

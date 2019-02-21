@@ -8,6 +8,7 @@ import {
   ModalBody,
   ModalFooter
 } from "reactstrap";
+import PostsPage from "../PostContainer/PostsPage";
 class Login extends Component {
   constructor() {
     super();
@@ -35,11 +36,14 @@ class Login extends Component {
     return (
       <div>
         <Modal
+          backdrop="static"
+          keyboard="false"
+          centered={true}
           isOpen={this.state.modal}
-          toggle={this.toggle}
+          // toggle={this.toggle}
           className={this.props.className}
         >
-          <ModalHeader toggle={this.toggle}>Sign In</ModalHeader>
+          <ModalHeader>Sign In</ModalHeader>
           <ModalBody>
             <Form>
               <Input
@@ -63,9 +67,9 @@ class Login extends Component {
             <Button onClick={this.signIn}>Sign In</Button>
           </ModalFooter>
         </Modal>
+        <PostsPage />
       </div>
     );
   }
 }
-
 export default Login;
