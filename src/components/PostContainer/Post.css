@@ -1,0 +1,23 @@
+.post-wrapper {
+  height: 500px;
+  width: 50%;
+  margin: 5px auto;
+}
+.post-header {
+  display: flex;
+}
+.post-image-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.post-image {
+  width: 100%;
+}
+.post-thumbnail-wrapper {
+  height: 50px;
+  width: 50px;
+}
+.post-thumbnail {
+  height: 100%;
+  border-radius: 50%;
+}

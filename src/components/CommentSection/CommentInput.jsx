@@ -1,5 +1,6 @@
 import React from "react";
 
+<<<<<<< HEAD
 const CommentInput = props => {
   return (
     <div>
@@ -12,6 +13,20 @@ const CommentInput = props => {
         />
       </form>
     </div>
+=======
+// COMMENT INPUT FORM
+
+const CommentInput = props => {
+  return (
+    <form onSubmit={props.submitComment}>
+      <input
+        type="text"
+        placeholder="Add Comment..."
+        value={props.comment}
+        onChange="props.changeComment"
+      />
+    </form>
+>>>>>>> daniel-starling
   );
 };
 export default CommentInput;

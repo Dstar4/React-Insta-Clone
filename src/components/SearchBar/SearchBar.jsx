@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 // import "./SearchBar.css";
 import Iglogo from "../../assets/iglogo.png";
 import InstaCamera from "../../assets/instaCamera.svg";
@@ -56,6 +57,28 @@ const SearchBar = props => {
         </Icon>
       </Icons>
     </Header>
+=======
+import "./SearchBar.css";
+const SearchBar = props => {
+  return (
+    <div className="search-bar-wrapper">
+      <div className="image-wrapper">INSTAGRAM</div>
+      <div>
+        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
+      </div>
+      <div className="social-wrapper">
+        <div className="social">
+          <i className="far fa-compass" />
+        </div>
+        <div className="social">
+          <i className="far fa-heart" />
+        </div>
+        <div className="social">
+          <i className="far fa-user-circle" />
+        </div>
+      </div>
+    </div>
+>>>>>>> daniel-starling
   );
 };
 export default SearchBar;

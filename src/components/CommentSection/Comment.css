@@ -1,0 +1,11 @@
+.comment-text {
+  text-align: left;
+  margin-left: 5px;
+  padding: 4px;
+}
+.comment {
+  font-size: 15px;
+}
+.user {
+  font-size: 10px;
+}
