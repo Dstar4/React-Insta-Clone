@@ -13,6 +13,18 @@ function createData(num) {
         {
           username: faker.internet.userName(),
           text: faker.lorem.sentence()
+        },
+        {
+          username: faker.internet.userName(),
+          text: faker.lorem.sentence()
+        },
+        {
+          username: faker.internet.userName(),
+          text: faker.lorem.sentence()
+        },
+        {
+          username: faker.internet.userName(),
+          text: faker.lorem.sentence()
         }
       ]
     };
